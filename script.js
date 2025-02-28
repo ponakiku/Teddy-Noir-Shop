@@ -1,5 +1,15 @@
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Tạo phần tử chứa ngôi sao
+  const starsContainer = document.createElement('div');
+  starsContainer.classList.add('stars');
+  document.body.appendChild(starsContainer);
+  
+  // Tạo các ngôi sao lấp lánh
+  for (let i = 0; i < 200; i++) {
+    createTwinklingStar(starsContainer);
+  }
+  
   // Tạo hiệu ứng sao rơi
   function createFallingStar() {
     const star = document.createElement('div');
@@ -15,6 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       star.remove();
     }, 5000);
+  }
+  
+  // Tạo ngôi sao lấp lánh
+  function createTwinklingStar(container) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    
+    // Vị trí và kích thước ngẫu nhiên
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.top = Math.random() * 100 + 'vh';
+    star.style.width = Math.random() * 3 + 1 + 'px';
+    star.style.height = star.style.width;
+    
+    // Độ trễ animation ngẫu nhiên
+    star.style.animationDelay = Math.random() * 4 + 's';
+    
+    container.appendChild(star);
   }
   
   // Tạo ngôi sao theo định kỳ

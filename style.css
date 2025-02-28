@@ -6,15 +6,15 @@
 }
 
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2980b9;
-  --accent-color: #E3F2FD;
-  --text-color: #333;
+  --primary-color: #9400d3;
+  --secondary-color: #8a2be2;
+  --accent-color: #4b0082;
+  --text-color: #f0f0f0;
   --light-text: #fff;
-  --dark-bg: #222;
-  --light-bg: #f5f9fc;
+  --dark-bg: #0a0a20;
+  --light-bg: #1a1a3a;
   --border-radius: 8px;
-  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
 }
 
 html {
@@ -27,8 +27,50 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: #EBF5FB;
-  overflow: hidden; /* Add this to hide content behind falling stars */
+  background-color: #000;
+  background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+/* Tạo các ngôi sao lấp lánh */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 4s infinite;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
 }
 
 .container {
@@ -178,7 +220,8 @@ nav ul li a:hover {
 /* Menu Section */
 .menu {
   padding: 5rem 0;
-  background-color: var(--light-bg);
+  background-color: rgba(26, 26, 58, 0.7);
+  backdrop-filter: blur(5px);
 }
 
 .menu h2, .promotions h2, .qa h2, .feedback h2 {
@@ -271,7 +314,10 @@ nav ul li a:hover {
 /* Promotions Section */
 .promotions {
   padding: 5rem 0;
-  background-color: var(--accent-color);
+  background-color: rgba(75, 0, 130, 0.5);
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
 }
 
 .promo-container {
@@ -308,7 +354,8 @@ nav ul li a:hover {
 /* Q&A Section */
 .qa {
   padding: 5rem 0;
-  background-color: var(--light-bg);
+  background-color: rgba(26, 26, 58, 0.7);
+  backdrop-filter: blur(5px);
 }
 
 .accordion {
@@ -368,7 +415,8 @@ nav ul li a:hover {
 /* Feedback Section */
 .feedback {
   padding: 5rem 0;
-  background-color: var(--accent-color);
+  background-color: rgba(75, 0, 130, 0.5);
+  backdrop-filter: blur(5px);
 }
 
 .chat-container {
