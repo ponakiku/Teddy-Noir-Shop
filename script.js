@@ -1,5 +1,24 @@
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Tạo hiệu ứng sao rơi
+  function createFallingStar() {
+    const star = document.createElement('div');
+    star.classList.add('falling-star');
+    
+    // Vị trí ngẫu nhiên
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    
+    document.body.appendChild(star);
+    
+    // Xóa ngôi sao sau khi hoàn thành animation
+    setTimeout(() => {
+      star.remove();
+    }, 5000);
+  }
+  
+  // Tạo ngôi sao theo định kỳ
+  setInterval(createFallingStar, 1000);
   // Hiệu ứng xuất hiện cho các mục menu khi scroll
   const menuItems = document.querySelectorAll('.menu-item');
   
