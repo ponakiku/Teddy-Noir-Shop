@@ -64,17 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(item);
   });
   
-  // Hiệu ứng xoay cho logo
-  const logo = document.getElementById('logo');
-  if (logo) {
-    logo.addEventListener('mouseenter', () => {
-      logo.style.animation = 'rotate 1s ease-in-out';
-    });
-    
-    logo.addEventListener('animationend', () => {
-      logo.style.animation = 'pulse 2s infinite';
-    });
-  }
+  // Logo đã được xóa, không cần hiệu ứng này nữa
   
   // Thêm animation cho nút menu khi hover
   const menuLinks = document.querySelectorAll('nav ul li a');
