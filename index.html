@@ -1,16 +1,200 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+<html lang="vi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Tea Shop</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-  Hello world
+  <header>
+    <div class="container">
+      <h1>Bubble Tea Shop</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#menu">Các loại trà</a></li>
+          <li><a href="#promotions">Khuyến mãi</a></li>
+          <li><a href="#qa">Hỏi & Đáp</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Chào mừng đến với Bubble Tea Shop</h2>
+      <p>Thưởng thức hương vị trà sữa tuyệt vời từ những nguyên liệu tươi ngon</p>
+      <a href="#menu" class="btn">Xem Menu</a>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2>Các loại trà sữa</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1558857563-c0c6ee6d8311?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Trà sữa truyền thống">
+          <h3>Trà sữa truyền thống</h3>
+          <p>Trà đen, sữa tươi, trân châu đường đen</p>
+          <p class="price">35.000₫</p>
+        </div>
+
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1593201464550-82c252686845?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Trà sữa matcha">
+          <h3>Trà sữa matcha</h3>
+          <p>Bột trà xanh, sữa tươi, trân châu trắng</p>
+          <p class="price">40.000₫</p>
+        </div>
+
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Trà đào">
+          <h3>Trà đào</h3>
+          <p>Trà đen, đào tươi, thạch đào</p>
+          <p class="price">38.000₫</p>
+        </div>
+
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1588929473475-d16bf1cca71b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Trà sữa socola">
+          <h3>Trà sữa socola</h3>
+          <p>Socola, sữa tươi, trân châu đường nâu</p>
+          <p class="price">42.000₫</p>
+        </div>
+
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1604748495920-a1759e6049d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Trà sữa dâu tây">
+          <h3>Trà sữa dâu tây</h3>
+          <p>Trà xanh, dâu tây tươi, sữa tươi</p>
+          <p class="price">45.000₫</p>
+        </div>
+
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Trà chanh">
+          <h3>Trà chanh mật ong</h3>
+          <p>Trà xanh, chanh tươi, mật ong</p>
+          <p class="price">32.000₫</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="promotions" class="promotions">
+    <div class="container">
+      <h2>Khuyến mãi hiện có</h2>
+      <div class="promo-container">
+        <div class="promo-item">
+          <div class="promo-content">
+            <h3>Mua 1 tặng 1</h3>
+            <p>Thứ 2 và thứ 3 hàng tuần, từ 14h-17h</p>
+            <p>Áp dụng cho tất cả trà sữa truyền thống</p>
+          </div>
+        </div>
+
+        <div class="promo-item">
+          <div class="promo-content">
+            <h3>Giảm 20%</h3>
+            <p>Đối với học sinh, sinh viên</p>
+            <p>Áp dụng khi mua trực tiếp và xuất trình thẻ</p>
+          </div>
+        </div>
+
+        <div class="promo-item">
+          <div class="promo-content">
+            <h3>Tặng topping</h3>
+            <p>Khi đặt trước qua app hoặc website</p>
+            <p>Áp dụng cho đơn hàng từ 100.000₫</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="qa" class="qa">
+    <div class="container">
+      <h2>Hỏi & Đáp</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-button">Các cửa hàng của bạn mở cửa giờ nào?</button>
+          <div class="accordion-content">
+            <p>Cửa hàng chúng tôi mở cửa từ 8:00 sáng đến 22:00 tối tất cả các ngày trong tuần.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">Trà sữa có thể đặt trước không?</button>
+          <div class="accordion-content">
+            <p>Có, bạn có thể đặt trước qua website hoặc gọi điện trực tiếp cho cửa hàng. Chúng tôi cũng nhận đặt số lượng lớn cho các sự kiện.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">Có thể điều chỉnh độ ngọt không?</button>
+          <div class="accordion-content">
+            <p>Tất nhiên! Chúng tôi cung cấp 5 mức độ ngọt: 0%, 30%, 50%, 70% và 100% để phù hợp với khẩu vị của từng khách hàng.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">Các loại topping có sẵn là gì?</button>
+          <div class="accordion-content">
+            <p>Chúng tôi có các loại topping: trân châu đen, trân châu trắng, thạch trái cây, pudding, kem cheese, sốt caramel và thạch cà phê.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="feedback" class="feedback">
+    <div class="container">
+      <h2>Gửi feedback cho chúng tôi</h2>
+      <div class="chat-container">
+        <div class="chat-box" id="chatBox">
+          <div class="chat-message shop">
+            <p>Xin chào! Chúng tôi rất mong nhận được đánh giá của bạn về trà sữa của chúng tôi. Bạn có thể chia sẻ trải nghiệm của mình ở đây.</p>
+          </div>
+        </div>
+        <div class="chat-input">
+          <input type="text" id="messageInput" placeholder="Nhập tin nhắn của bạn...">
+          <button id="sendButton">Gửi</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Bubble Tea Shop</h3>
+          <p>Mang đến cho bạn những ly trà sữa ngon nhất với nguyên liệu tươi ngon và công thức độc đáo.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Liên hệ</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận XYZ, TP.HCM</p>
+          <p><i class="fas fa-phone"></i> 0123 456 789</p>
+          <p><i class="fas fa-envelope"></i> info@bubbletea.com</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Theo dõi chúng tôi</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Bubble Tea Shop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
-
 </html>
