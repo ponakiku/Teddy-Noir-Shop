@@ -28,7 +28,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: #000;
-  background-image: url('https://cdn.jsdelivr.net/gh/ponakiku/Teddy-Noir-Shop@gh-pages/attached_assets/image_1740751994349.png');
+  background-image: url('./attached_assets/image_1740751994349.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

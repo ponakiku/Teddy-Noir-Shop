@@ -1,5 +1,19 @@
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Kiểm tra xem background đã load chưa
+  console.log("Checking background image...");
+  
+  // Tạo thẻ img ẩn để kiểm tra background
+  const imgTest = new Image();
+  imgTest.onload = function() {
+    console.log("Background image loaded successfully");
+  };
+  imgTest.onerror = function() {
+    console.error("Background image failed to load");
+    // Thử load bằng URL khác nếu load thất bại
+    document.body.style.backgroundImage = "url('https://cdn.jsdelivr.net/gh/ponakiku/Teddy-Noir-Shop@gh-pages/attached_assets/image_1740751994349.png')";
+  };
+  imgTest.src = './attached_assets/image_1740751994349.png';
   // Tạo phần tử chứa ngôi sao
   const starsContainer = document.createElement('div');
   starsContainer.classList.add('stars');
