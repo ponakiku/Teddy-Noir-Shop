@@ -1,5 +1,47 @@
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Hiệu ứng xuất hiện cho các mục menu khi scroll
+  const menuItems = document.querySelectorAll('.menu-item');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  
+  menuItems.forEach(item => {
+    observer.observe(item);
+  });
+  
+  // Hiệu ứng xoay cho logo
+  const logo = document.getElementById('logo');
+  if (logo) {
+    logo.addEventListener('mouseenter', () => {
+      logo.style.animation = 'rotate 1s ease-in-out';
+    });
+    
+    logo.addEventListener('animationend', () => {
+      logo.style.animation = 'pulse 2s infinite';
+    });
+  }
+  
+  // Thêm animation cho nút menu khi hover
+  const menuLinks = document.querySelectorAll('nav ul li a');
+  menuLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      this.style.transition = 'color 0.3s, transform 0.3s';
+      this.style.transform = 'translateY(-3px)';
+    });
+    
+    link.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
   // Chat functionality
   const chatBox = document.getElementById('chatBox');
   const messageInput = document.getElementById('messageInput');
